@@ -1,47 +1,9 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-
+#include "game.h"
 using namespace std;
-bool playGame(int guesses)
-{
-    cout << "Playing Game...\n";
-    int correct;
-    srand(time(NULL));
-    if (guesses == 1)
-    {
-        correct = rand() % 200;
-    }
-    else
-    {
-        correct = rand() % 20;
-    }
-    cout << correct << endl;
-    int guessCount = 0;
-    cout << "You get " << guesses << " guesses. \n";
-    while (guessCount < guesses)
-    {
-        cout << "Guess a number...";
 
-        int guess;
-        cin >> guess;
-        if (guess == correct)
-        {
-            return true;
-        }
-        else if (guess < correct)
-        {
-            cout << "Your guess is low\n";
-        }
-        else
-        {
-            cout << "Guess is too high\n";
-        }
-        guessCount++;
-        cout << "You've guessed " << guessCount << " times. \n";
-    }
-    return false;
-}
 
 int main()
 {
@@ -98,7 +60,7 @@ int main()
             //    }
             //    else if(difficulty == "impossible" && beatGame){
             //     cout << "LOL good luck\n";
-            //    } else if (difficulty == "impossible" && !beatGame){
+            //    } else if (difficultdy == "impossible" && !beatGame){
             //     cout << "You have to beat the game at least once.";
             //    }
         }
