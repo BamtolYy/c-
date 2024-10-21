@@ -1,0 +1,3 @@
+bananas 20.41
+burgers 62
+cheese 274
